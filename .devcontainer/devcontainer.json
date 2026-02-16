@@ -3,6 +3,7 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
+    "postStartCommand": "docker-compose up -d",
     "customizations": {
         "vscode": {
             "extensions": [
