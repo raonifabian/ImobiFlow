@@ -1,0 +1,16 @@
+# Framework Principal
+Django>=5.0,<5.2
+
+# Manipulação de Dados e Excel
+pandas
+openpyxl
+
+# Geração de PDF (WeasyPrint e dependências)
+weasyprint
+django-weasyprint
+
+# Manipulação de Imagens (Necessário para o campo ImageField do Django)
+Pillow
+
+# Utilidades
+python-dotenv
