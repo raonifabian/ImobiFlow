@@ -14,3 +14,6 @@ Pillow
 
 # Utilidades
 python-dotenv
+
+# Banco de dados
+psycopg2-binary
