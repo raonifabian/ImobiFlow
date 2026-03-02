@@ -1,0 +1,61 @@
+{% extends 'imoveis/base.html' %}
+
+{% block title %}{{ imovel.titulo }} - ImobiFlow{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 mb-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'imovel_list' %}">Voltar para Lista</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ imovel.titulo }}</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="col-md-7">
+        {% if imovel.imagem %}
+            <img src="{{ imovel.imagem.url }}" class="img-fluid rounded shadow" alt="{{ imovel.titulo }}">
+        {% else %}
+            <div class="bg-secondary text-white d-flex align-items-center justify-content-center rounded shadow" style="height: 400px;">
+                <p>Nenhuma imagem disponível</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="col-md-5">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h1 class="h2 mb-3">{{ imovel.titulo }}</h1>
+                <h3 class="text-primary mb-4">R$ {{ imovel.valor|floatformat:2 }}</h3>
+                
+                <ul class="list-group list-group-flush mb-4">
+                    <li class="list-group-item"><strong>Endereço:</strong> {{ imovel.endereco }}</li>
+                    <li class="list-group-item"><strong>Área:</strong> {{ imovel.area }} m²</li>
+                    <li class="list-group-item"><strong>Quartos:</strong> {{ imovel.quartos }}</li>
+                </ul>
+
+                <div class="d-grid gap-2">
+                    <a href="{% url 'imovel_pdf' imovel.pk %}" class="btn btn-danger btn-lg">
+                        <i class="bi bi-file-earmark-pdf"></i> Gerar Ficha em PDF
+                    </a>
+                    <a href="https://wa.me/seu-numero" class="btn btn-success btn-lg">
+                        Contactar via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h4>Descrição</h4>
+                <p class="text-muted">{{ imovel.descricao|linebreaks }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

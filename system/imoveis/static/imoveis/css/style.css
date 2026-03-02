@@ -1,0 +1,61 @@
+/* Definindo Variáveis de Design */
+:root {
+    --primary-color: #1a2b3c;    /* Azul Marinho Profundo */
+    --accent-color: #28a745;     /* Verde Sucesso para Preços */
+    --bg-light: #f4f7f6;
+    --card-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    --card-shadow-hover: 0 12px 30px rgba(0,0,0,0.15);
+    --border-radius: 16px;
+}
+
+/* Tipografia */
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-light);
+    color: #333;
+}
+
+/* Navbar Customizada (Glassmorphism) */
+.navbar-custom {
+    background: rgba(26, 43, 60, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+}
+
+/* Cards de Imóveis Premium */
+.imovel-card {
+    border: none;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: var(--card-shadow);
+}
+
+.imovel-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.imovel-card img {
+    transition: transform 0.5s ease;
+}
+
+.imovel-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Botões Personalizados */
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.btn-primary-custom:hover {
+    opacity: 0.9;
+    color: white;
+}

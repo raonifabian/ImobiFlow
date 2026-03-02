@@ -1,0 +1,53 @@
+{% extends 'imoveis/base.html' %}
+
+{% block title %}Lista de Imóveis - ImobiFlow{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Catálogo de Imóveis</h1>
+    <span class="badge bg-secondary">{{ page_obj.paginator.count }} imóveis cadastrados</span>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for imovel in imoveis %}
+    <div class="col">
+        <div class="card h-100 shadow-sm">
+            {% if imovel.imagem %}
+                <img src="{{ imovel.imagem.url }}" class="card-img-top" alt="{{ imovel.titulo }}" style="height: 200px; object-fit: cover;">
+            {% else %}
+                <div class="bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+                    Sem Foto
+                </div>
+            {% endif %}
+            
+            <div class="card-body">
+                <h5 class="card-title">{{ imovel.titulo }}</h5>
+                <p class="card-text text-muted">{{ imovel.endereco|truncatechars:50 }}</p>
+                <h6 class="text-primary">R$ {{ imovel.valor|floatformat:2 }}</h6>
+            </div>
+            <div class="card-footer bg-transparent border-top-0">
+                <a href="{% url 'imovel_detail' imovel.pk %}" class="btn btn-outline-primary w-100">Ver Detalhes</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+        <div class="alert alert-info">Nenhum imóvel encontrado no banco de dados.</div>
+    </div>
+    {% endfor %}
+</div>
+
+{% if is_paginated %}
+<nav class="mt-4">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Anterior</a></li>
+        {% endif %}
+        <li class="page-item active"><span class="page-link">{{ page_obj.number }}</span></li>
+        {% if page_obj.has_next %}
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Próximo</a></li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+{% endblock %}
