@@ -4,11 +4,11 @@
 <section class="py-5 text-center bg-white rounded shadow-sm mb-5">
     <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">Encontre o imóvel dos seus sonhos</h1>
-            <p class="lead text-muted">Gestão simplificada e catalogação profissional para o mercado imobiliário.</p>
-            <p>
-                <a href="{% url 'imovel_list' %}" class="btn btn-primary my-2">Ver Catálogo Completo</a>
-                <a href="#contato" class="btn btn-secondary my-2">Falar com Corretor</a>
+            <h1 class="fw-light animate__animated animate__fadeInUp">Encontre o imóvel dos seus sonhos</h1>
+            <p class="lead text-muted animate__animated animate__fadeInUp animate__delay-1s">Gestão simplificada e catalogação profissional para o mercado imobiliário.</p>
+            <p class="animate__animated animate__fadeIn animate__delay-2s">
+                <a href="{% url 'imovel_list' %}" class="btn btn-primary-custom my-2">Ver Catálogo Completo</a>
+                <a href="#contato" class="btn btn-secondary-custom my-2">Falar com Corretor</a>
             </p>
         </div>
     </div>
@@ -18,8 +18,8 @@
     <h2 class="text-center mb-4">Destaques</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for imovel in imoveis_destaque %}
-        <div class="col">
-            <div class="card h-100 border-0 shadow-sm">
+        <div class="col animate__animated animate__fadeInUp">
+            <div class="card imovel-card h-100 border-0">
                 {% if imovel.imagem %}
                     <img src="{{ imovel.imagem.url }}" class="card-img-top" alt="{{ imovel.titulo }}" style="height: 200px; object-fit: cover;">
                 {% endif %}
