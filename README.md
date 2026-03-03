@@ -33,26 +33,26 @@ premium.
 
 ## 🖼️ Funcionalidades (V1)
 
-✔ **Vitrine Digital (Landing Page)**\
+✔ **Vitrine Digital (Landing Page)**
 Página inicial moderna com destaques e chamadas para ação.
 
-✔ **Catálogo de Imóveis**\
+✔ **Catálogo de Imóveis**
 Listagem completa com paginação e layout em cards responsivos.
 
-✔ **Ficha Detalhada + Exportação em PDF**\
+✔ **Ficha Detalhada + Exportação em PDF**
 Geração automática de ficha técnica em PDF (via WeasyPrint), pronta para
 envio ao cliente ou impressão.
 
-✔ **Importação de Dados em Massa (CSV)**\
+✔ **Importação de Dados em Massa (CSV)**
 - Via interface web (acesso restrito a administradores) - Via comando
 customizado no Django (CLI)
 
-✔ **Painel Administrativo Completo**\
+✔ **Painel Administrativo Completo**
 Gestão avançada via Django Admin com filtros e busca.
 
-✔ **Design Premium e Responsivo**\
-- Estilização customizada\
-- Efeitos de glassmorphism\
+✔ **Design Premium e Responsivo**
+- Estilização customizada
+- Efeitos de glassmorphism
 - Animações suaves com Animate.css
 
 ------------------------------------------------------------------------
@@ -171,8 +171,8 @@ O sistema permite popular o banco rapidamente com arquivos CSV.
 
 ### 🔹 Opção 1 --- Interface Web (Recomendado)
 
-1.  Faça login como administrador\
-2.  Clique em Importar CSV\
+1.  Faça login como administrador
+2.  Clique em Importar CSV
 3.  Envie seu arquivo
 
 ### 🔹 Opção 2 --- Terminal
@@ -201,7 +201,7 @@ python system/manage.py importar_imoveis caminho/do/arquivo.csv
 
 ## 📄 Licença
 
-Este projeto está sob a licença **MIT**.\
+Este projeto está sob a licença **MIT**.
 Consulte o arquivo `LICENSE` para mais informações.
 
 ------------------------------------------------------------------------
