@@ -3,6 +3,7 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
+    "postStartCommand": "docker-compose up -d",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -12,6 +13,12 @@
             ]
         }
     },
+    "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+        "version": "latest",
+        "enableNonRootDocker": "true"
+    }
+},
     "remoteUser": "vscode",
     "postCreateCommand": "pip install --upgrade pip && if [ -f requirements.txt ]; then pip install -r requirements.txt; fi;"
 }

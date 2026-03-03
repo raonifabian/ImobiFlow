@@ -1,0 +1,32 @@
+{% extends 'imoveis/base.html' %}
+
+{% block title %}Importar Catálogo - ImobiFlow{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <div class="card imovel-card animate__animated animate__fadeInUp border-0 p-4">
+            <h2 class="text-center mb-4 text-primary">Importar Imóveis (CSV)</h2>
+            
+            {% if form.errors %}
+                <div class="alert alert-danger">Por favor, corrija os erros abaixo.</div>
+            {% endif %}
+
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-4">
+                    {{ form.arquivo_csv.label_tag }}
+                    {{ form.arquivo_csv }}
+                </div>
+                
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary-custom">
+                        Iniciar Importação
+                    </button>
+                    <a href="{% url 'imovel_list' %}" class="btn btn-secondary-custom">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/python:3.12
+FROM mcr.microsoft.com/devcontainers/python:3.12-bookworm
 
 # Atualiza e instala dependências de sistema
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \

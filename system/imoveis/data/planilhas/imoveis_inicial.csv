@@ -1,0 +1,6 @@
+referencia,titulo,finalidade,tipo_imovel,valor,area,quartos,cidade,bairro,publicado
+REF-101,Apartamento Moderno,venda,apartamento,350000.00,60,2,São Paulo,Bela Vista,True
+REF-102,Casa com Quintal,venda,casa,550000.00,150,3,Curitiba,Portão,True
+REF-103,Studio Compacto,venda,apartamento,220000.00,30,1,Rio de Janeiro,Copacabana,True
+REF-104,Sala Comercial Centro,aluguel,salao,1500.00,40,0,Belo Horizonte,Centro,True
+REF-105,Kitnet Estudante,aluguel,kitnet,800.00,25,1,Campinas,Barão Geraldo,True

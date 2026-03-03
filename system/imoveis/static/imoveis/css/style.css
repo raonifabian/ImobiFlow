@@ -1,0 +1,85 @@
+/* Definindo Variáveis de Design */
+:root {
+    --primary-color: #1a2b3c;    /* Azul Marinho Profundo */
+    --accent-color: #28a745;     /* Verde Sucesso para Preços */
+    --secondary-color: #6c757d;  /* Cinza chumbo para o botão secundário */
+    --bg-light: #f4f7f6;
+    --card-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    --card-shadow-hover: 0 12px 30px rgba(0,0,0,0.15);
+    --border-radius: 16px;
+}
+
+/* Tipografia */
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-light);
+    color: #333;
+}
+
+/* Navbar Customizada (Glassmorphism) */
+.navbar-custom {
+    background: rgba(26, 43, 60, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+}
+
+/* Cards de Imóveis Premium */
+.imovel-card {
+    border: none;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: var(--card-shadow);
+}
+
+.imovel-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.imovel-card img {
+    transition: transform 0.5s ease;
+}
+
+.imovel-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Botões Personalizados */
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    color: #ffffff !important; /* Força o texto a ser branco ignorando o Bootstrap */
+    border: 2px solid var(--primary-color); /* Adiciona uma borda invisível para o hover */
+    border-radius: 8px;
+    padding: 10px 25px;
+    font-weight: 600;
+    text-decoration: none; /* Garante que não tenha sublinhado de link */
+    transition: all 0.3s ease-in-out; /* Suaviza a troca de cores */
+}
+
+.btn-primary-custom:hover {
+    background-color: #ffffff; /* Fundo fica branco */
+    color: #1a2b3c !important; /* Texto fica escuro (usando seu Azul Marinho para harmonia, ou mude para #000 para preto puro) */
+    border-color: var(--primary-color); /* A borda aparece contornando o botão */
+    transform: translateY(-2px); /* Dá uma leve "levantadinha" no botão */
+}
+
+/* Botão Secundário Personalizado */
+.btn-secondary-custom {
+    background-color: var(--secondary-color);
+    color: #ffffff !important;
+    border: 2px solid var(--secondary-color); /* Mesma borda de 2px do primário */
+    border-radius: 8px;
+    padding: 10px 25px; /* Mesmo padding para igualar a altura */
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary-custom:hover {
+    background-color: #ffffff;
+    color: var(--secondary-color) !important;
+    border-color: var(--secondary-color);
+    transform: translateY(-2px); /* Mesmo efeito de levantar */
+}

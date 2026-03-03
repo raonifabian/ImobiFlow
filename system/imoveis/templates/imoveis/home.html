@@ -1,0 +1,36 @@
+{% extends 'imoveis/base.html' %}
+
+{% block content %}
+<section class="py-5 text-center bg-white rounded shadow-sm mb-5">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light animate__animated animate__fadeInUp">Encontre o imóvel dos seus sonhos</h1>
+            <p class="lead text-muted animate__animated animate__fadeInUp animate__delay-1s">Gestão simplificada e catalogação profissional para o mercado imobiliário.</p>
+            <p class="animate__animated animate__fadeIn animate__delay-2s">
+                <a href="{% url 'imovel_list' %}" class="btn btn-primary-custom my-2">Ver Catálogo Completo</a>
+                <a href="#contato" class="btn btn-secondary-custom my-2">Falar com Corretor</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<div class="container mb-5">
+    <h2 class="text-center mb-4">Destaques</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for imovel in imoveis_destaque %}
+        <div class="col animate__animated animate__fadeInUp">
+            <div class="card imovel-card h-100 border-0">
+                {% if imovel.imagem %}
+                    <img src="{{ imovel.imagem.url }}" class="card-img-top" alt="{{ imovel.titulo }}" style="height: 200px; object-fit: cover;">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ imovel.titulo }}</h5>
+                    <p class="card-text">R$ {{ imovel.valor|floatformat:2 }}</p>
+                    <a href="{% url 'imovel_detail' imovel.pk %}" class="btn btn-sm btn-outline-primary">Detalhes</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
