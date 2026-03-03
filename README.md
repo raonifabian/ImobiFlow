@@ -1,14 +1,18 @@
 # 🏢 ImobiFlow
 
-```{=html}
-<p align="center">
-```
-`<b>`{=html}Sistema de Gestão e Catalogação de
-Imóveis`</b>`{=html}`<br>`{=html} Aplicação web moderna para
-administração, vitrine e geração de documentação imobiliária.
-```{=html}
-</p>
-```
+<div align="center">
+
+### 🏠 Sistema de Gestão e Catalogação de Imóveis
+
+**Aplicação web moderna para administração, vitrine e geração de documentação imobiliária.**
+
+[![GitHub](https://img.shields.io/badge/GitHub-raonifabian%2FImobiFlow-blue?logo=github)](https://github.com/raonifabian/ImobiFlow)
+[![Django](https://img.shields.io/badge/Django-5.0+-darkgreen?logo=django)](https://www.djangoproject.com/)
+[![Python](https://img.shields.io/badge/Python-3.12+-blue?logo=python)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+</div>
+
 
 ------------------------------------------------------------------------
 
