@@ -43,14 +43,14 @@ Listagem completa com paginação e layout em cards responsivos.
 Geração automática de ficha técnica em PDF (via WeasyPrint), pronta para
 envio ao cliente ou impressão.
 
-✔ **Importação de Dados em Massa (CSV)**
+✔ **Importação de Dados em Massa (CSV)**\
 - Via interface web (acesso restrito a administradores) - Via comando
 customizado no Django (CLI)
 
-✔ **Painel Administrativo Completo**
+✔ **Painel Administrativo Completo**\
 Gestão avançada via Django Admin com filtros e busca.
 
-✔ **Design Premium e Responsivo**
+✔ **Design Premium e Responsivo**\
 - Estilização customizada
 - Efeitos de glassmorphism
 - Animações suaves com Animate.css
