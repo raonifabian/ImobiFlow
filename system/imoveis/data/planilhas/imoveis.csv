@@ -1,0 +1,16 @@
+referencia,titulo,finalidade,tipo_imovel,valor,area,quartos,cidade,bairro,publicado
+REF-201,Cobertura Duplex com Piscina,venda,apartamento,1250000.00,180,4,São Paulo,Moema,True
+REF-202,Casa de Condomínio Fechado,venda,casa,850000.00,220,3,Campinas,Alphaville,True
+REF-203,Apartamento Próximo ao Metrô,aluguel,apartamento,2500.00,65,2,São Paulo,Vila Mariana,True
+REF-204,Kitnet Mobiliada Centro,aluguel,kitnet,1200.00,35,1,Curitiba,Centro,True
+REF-205,Salão Comercial de Esquina,aluguel,salao,4500.00,120,0,Belo Horizonte,Savassi,True
+REF-206,Mansão com Vista para o Mar,venda,casa,3500000.00,450,5,Rio de Janeiro,Barra da Tijuca,True
+REF-207,Studio Decorado e Moderno,venda,apartamento,320000.00,40,1,São Paulo,Pinheiros,True
+REF-208,Casa Geminada Nova,venda,casa,420000.00,90,2,Belo Horizonte,Pampulha,True
+REF-209,Loja de Shopping Center,aluguel,salao,8000.00,60,0,Curitiba,Batel,True
+REF-210,Apartamento 3 Suítes,venda,apartamento,980000.00,130,3,Rio de Janeiro,Leblon,False
+REF-211,Kitnet Universitária,aluguel,kitnet,950.00,28,1,Campinas,Barão Geraldo,True
+REF-212,Casa de Praia Espaçosa,venda,casa,1100000.00,200,4,Florianópolis,Jurerê,True
+REF-213,Apartamento Térreo com Quintal,venda,apartamento,450000.00,75,2,Porto Alegre,Moinhos de Vento,True
+REF-214,Amplo Salão para Restaurante,aluguel,salao,6000.00,150,0,São Paulo,Vila Madalena,True
+REF-215,Sobrado Tradicional,venda,casa,680000.00,140,3,Curitiba,Água Verde,True
