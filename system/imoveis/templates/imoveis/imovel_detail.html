@@ -14,8 +14,8 @@
     </div>
 
     <div class="col-md-7">
-        {% if imovel.imagem %}
-            <img src="{{ imovel.imagem.url }}" class="img-fluid rounded shadow" alt="{{ imovel.titulo }}">
+        {% if imovel.foto_imovel %}
+            <img src="{{ imovel.foto_imovel.url }}" class="img-fluid rounded shadow" alt="{{ imovel.titulo }}">
         {% else %}
             <div class="bg-secondary text-white d-flex align-items-center justify-content-center rounded shadow" style="height: 400px;">
                 <p>Nenhuma imagem disponível</p>

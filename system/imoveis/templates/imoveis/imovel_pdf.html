@@ -75,8 +75,8 @@
     <h1 class="imovel-titulo">{{ imovel.titulo }}</h1>
     <div class="preco">R$ {{ imovel.valor|floatformat:2 }}</div>
 
-    {% if imovel.imagem %}
-        <img src="{{ imovel.imagem.path }}" class="foto-principal">
+    {% if imovel.foto_imovel %}
+        <img src="{{ imovel.foto_imovel.path }}" class="foto-principal">
     {% endif %}
 
     <div class="info-grid">

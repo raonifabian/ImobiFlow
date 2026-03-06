@@ -24,7 +24,7 @@ class ImovelListView(ListView):
     model = Imovel
     template_name = 'imoveis/imovel_list.html'  # Especifica o template a ser usado
     context_object_name = 'imoveis'
-    paginate_by = 10  # Paginação: 10 imóveis por página
+    paginate_by = 15  # Paginação: 10 imóveis por página
 
 # View para exibir detalhes de um imóvel específico
 class ImovelDetailView(DetailView):

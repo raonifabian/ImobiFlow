@@ -20,8 +20,8 @@
         {% for imovel in imoveis_destaque %}
         <div class="col animate__animated animate__fadeInUp">
             <div class="card imovel-card h-100 border-0">
-                {% if imovel.imagem %}
-                    <img src="{{ imovel.imagem.url }}" class="card-img-top" alt="{{ imovel.titulo }}" style="height: 200px; object-fit: cover;">
+                {% if imovel.foto_imovel %}
+                    <img src="{{ imovel.foto_imovel.url }}" class="card-img-top" alt="{{ imovel.titulo }}" style="height: 200px; object-fit: cover;">
                 {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ imovel.titulo }}</h5>
